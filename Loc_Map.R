@@ -3,7 +3,7 @@ library(dplyr)
 library(readxl)
 library(ggmap)
 library(tidyr)
-register_google(key = 'AIzaSyBsqd6lD_uRllA0FGY7IqbLUZ_wSzfx5jM')
+register_google(key = '') # I removed my key because Google got mad at it being public
 locations <- read_excel('DSPG_locations.xlsx')
 locations_df <- separate(locations, 'Coordinates', into = c('Lat', 'Long'), sep = ', ')
 locations_sub <- locations_df[3:length(locations_df$Location),] #remove missing values
